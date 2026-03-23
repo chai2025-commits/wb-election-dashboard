@@ -100,8 +100,8 @@ function locName(type, distId, custom) {
 
 // ─── SUPABASE CLIENT ─────────────────────────────────────────────────────────
 // ⚠️  Replace these two values with your own from Supabase → Settings → API
-const SUPA_URL = "https://YOUR_PROJECT_ID.supabase.co";
-const SUPA_KEY = "YOUR_ANON_PUBLIC_KEY";
+const SUPA_URL = import.meta.env.VITE_SUPA_URL;
+const SUPA_KEY = import.meta.env.VITE_SUPA_KEY;
 const supabase = window.supabase.createClient(SUPA_URL, SUPA_KEY);
 
 // ─── STORAGE HELPERS ─────────────────────────────────────────────────────────
